@@ -3,3 +3,6 @@ __pycache__/
 .ipynb_checkpoints/
 *.pyc
 old/
+
+##credenciales de la vpn
+scripts/vpn.env
