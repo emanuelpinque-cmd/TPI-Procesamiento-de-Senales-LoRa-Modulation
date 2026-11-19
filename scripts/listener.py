@@ -19,10 +19,10 @@ import adi
 
 ##---------------- Parametros ----------------
 IPS = ["192.168.1.35"]   ##se prueban en este orden
-TX_DESDE = -50          ##tx_gain inicial (dB)
-TX_HASTA = -48          ##tx_gain final (dB), incluido
+TX_DESDE = -80          ##tx_gain inicial (dB)
+TX_HASTA = 0       ##tx_gain final (dB), incluido
 TX_PASO = 0.25
-N = 1000                  ##capturas por punto
+N = 2000                  ##capturas por punto
 SF = 7
 PL = [12,32,21,5,1]     ##payload (simbolos)
 before = 2000           ##silencio antes de la trama
