@@ -1,0 +1,82 @@
+parametros: MODO=sweep IPS=192.168.1.35,192.168.1.31,192.168.1.33,192.168.1.34 TX_DESDE=-42 TX_HASTA=-26 TX_PASO=0.5 N=300 BARRIDOS_MAX=1 HORA_FIN=None
+modo sweep | barridos de tx_gain: -42.0 a -26.0 dB | N = 300 | duracion: indefinida | se corta: nunca
+conectando a 192.168.1.35 ...
+tx_gain = -42.0 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -42.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -41.5 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+ERROR: READ ALL: -110
+ERROR: READ ALL: -110
+ERROR: iio:device4: Unable to dequeue block: Connection timed out (110)
+progreso de 192.168.1.35 guardado: 1 de 33 ganancias en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.35/listener_2026-11-20_07-43-22_192.168.1.35.npz
+error con 192.168.1.35 -> TimeoutError [Errno 110] Connection timed out
+>>> reconectando la vpn con /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/vpn.sh
+POST https://200.16.19.5/
+Connected to 200.16.19.5:443
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got HTTP response: HTTP/1.1 303 See Other
+GET https://200.16.19.5/
+Connected to 200.16.19.5:443
+SSL negotiation with 200.16.19.5
+ERROR: READ INTEGER: -110
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Please enter your username and password.
+POST https://200.16.19.5/webvpn.html
+Error reading HTTP response: Invalid argument
+Retrying failed POST request on new connection
+POST https://200.16.19.5/webvpn.html
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Failed to read from TLS/DTLS socket: Success.
+Error fetching HTTPS response
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got CONNECT response: HTTP/1.1 200 OK
+CSTP connected. DPD 300, Keepalive 30
+No DTLS address
+Set up UDP failed; using SSL instead
+ERROR: READ INTEGER: -110
+Configured as 193.168.1.13, with SSL connected and DTLS disabled
+Session authentication will expire at Fri, 20 Nov 2026 19:45:13 -03
+Continuing in background; pid 159190
+Using vhost-net for tun acceleration, ring size 32
+ERROR: READ INTEGER: -110
+el DNS de la vpn no resuelve: se vuelve al del router con nmcli
+Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/28)
+>>> esperando 20 s ...
+conectando a 192.168.1.31 ...
+tx_gain = -42.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -42.0 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -41.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -41.5 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -41.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -41.0 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -40.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -40.5 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -40.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -40.0 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -39.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -39.5 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -39.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -39.0 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -38.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -38.5 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -38.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+tx_gain = -38.0 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.31
+'.venv/bin/python' terminated by signal TERM.
+CSTP rekey due
+SSL connection failure: TLS Application data were received, while expecting handshake data.
+Rehandshake failed; attempting new-tunnel
+EPOLL_CTL_DEL: Bad file descriptor
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got CONNECT response: HTTP/1.1 200 OK
+Reconnect gave different Legacy IP netmask (255.255.255.0 != 255.255.255.255)
+Cookie is no longer valid, ending session
+Reconnect failed
+Cookie was rejected by server; exiting.

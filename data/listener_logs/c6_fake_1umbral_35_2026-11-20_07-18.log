@@ -1,0 +1,42 @@
+parametros: MODO=fake IPS=192.168.1.35,192.168.1.31,192.168.1.33,192.168.1.34 TX_DESDE=-36 TX_HASTA=0 TX_PASO=2 N=200 thresholdFake=0.62 BARRIDOS_MAX=1 HORA_FIN=None
+modo fake | barridos de tx_gain: -36.0 a 0.0 dB | N = 200 | duracion: indefinida | se corta: nunca
+tx_gain = -36.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -36.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -34.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -34.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -32.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -32.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -30.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -30.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -28.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -28.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -26.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -26.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -24.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -24.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -22.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -22.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.0 Flat FER = 0.05 | no detectados = 10 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -14.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -14.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -12.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -12.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -10.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -10.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -8.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -8.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -6.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -6.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -4.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -4.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -2.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -2.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = 0.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = 0.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.35
+barrido 1 terminado con 192.168.1.35: /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.35/listener_fake_2026-11-20_07-18-30_192.168.1.35.npz
+fin | barridos completos: 1 | capturas en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures

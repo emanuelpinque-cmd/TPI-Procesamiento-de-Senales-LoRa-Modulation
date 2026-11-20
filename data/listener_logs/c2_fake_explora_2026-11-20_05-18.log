@@ -1,0 +1,171 @@
+parametros: MODO=fake IPS=192.168.1.31,192.168.1.33,192.168.1.34,192.168.1.35 TX_DESDE=-70 TX_HASTA=0 TX_PASO=2 N=200 BARRIDOS_MAX=1
+modo fake | barridos de tx_gain: -70.0 a 0.0 dB | N = 200 | duracion: indefinida | se corta: 20/11 11:30
+tx_gain = -70.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -70.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -68.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -68.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -66.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -66.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -64.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -64.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -62.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -62.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -60.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -60.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -58.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -58.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -56.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -56.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -54.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -54.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -52.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -52.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -50.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -50.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -48.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -48.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -46.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -46.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -44.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -44.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -42.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -42.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -40.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -40.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -38.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -38.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -36.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -36.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -34.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -34.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -32.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -32.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -30.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+tx_gain = -30.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.31
+ERROR: READ INTEGER: -110
+ERROR: iio:device4: Unable to dequeue block: Connection timed out (110)
+progreso de 192.168.1.31 guardado: 21 de 36 ganancias en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.31/listener_fake_2026-11-20_05-18-29_192.168.1.31.npz
+error con 192.168.1.31 -> TimeoutError [Errno 110] Connection timed out
+>>> reconectando la vpn con /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/vpn.sh
+POST https://200.16.19.5/
+Connected to 200.16.19.5:443
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got HTTP response: HTTP/1.1 303 See Other
+GET https://200.16.19.5/
+Connected to 200.16.19.5:443
+SSL negotiation with 200.16.19.5
+ERROR: READ INTEGER: -110
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Please enter your username and password.
+POST https://200.16.19.5/webvpn.html
+Error reading HTTP response: Invalid argument
+Retrying failed POST request on new connection
+POST https://200.16.19.5/webvpn.html
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Failed to read from TLS/DTLS socket: Success.
+Error fetching HTTPS response
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got CONNECT response: HTTP/1.1 200 OK
+CSTP connected. DPD 300, Keepalive 30
+No DTLS address
+Set up UDP failed; using SSL instead
+Configured as 193.168.1.10, with SSL connected and DTLS disabled
+Session authentication will expire at Fri, 20 Nov 2026 17:38:23 -03
+Continuing in background; pid 140742
+>>> esperando 20 s ...
+Using vhost-net for tun acceleration, ring size 32
+ERROR: READ INTEGER: -110
+ERROR: READ INTEGER: -110
+tx_gain = -70.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -70.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -68.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -68.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -66.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -66.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -64.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -64.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -62.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -62.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -60.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -60.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -58.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -58.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -56.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -56.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -54.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -54.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -52.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -52.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -50.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -50.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -48.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -48.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -46.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -46.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -44.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -44.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -42.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -42.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -40.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -40.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -38.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -38.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -36.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -36.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -34.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -34.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -32.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -32.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -30.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -30.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -28.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -28.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -26.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -26.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -24.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -24.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -22.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -22.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -20.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -20.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -18.0 Flat FER = 0.495 | no detectados = 99 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -18.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -16.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -16.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -14.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -14.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -12.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -12.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -10.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -10.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -8.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -8.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -6.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -6.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -4.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -4.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -2.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = -2.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = 0.0 Flat FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+tx_gain = 0.0 Freq.sel. FER = 0.5 | no detectados = 100 | falsas alarmas = 0 | ip 192.168.1.33
+barrido 1 terminado con 192.168.1.33: /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.33/listener_fake_2026-11-20_05-38-49_192.168.1.33.npz
+fin | barridos completos: 1 | capturas en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures
+CSTP rekey due
+SSL connection failure: TLS Application data were received, while expecting handshake data.
+Rehandshake failed; attempting new-tunnel
+EPOLL_CTL_DEL: Bad file descriptor
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got CONNECT response: HTTP/1.1 200 OK
+Reconnect gave different Legacy IP netmask (255.255.255.0 != 255.255.255.255)
+Cookie is no longer valid, ending session
+Reconnect failed
+Cookie was rejected by server; exiting.

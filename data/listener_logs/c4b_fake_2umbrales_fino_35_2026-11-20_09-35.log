@@ -1,0 +1,105 @@
+parametros: MODO=fake IPS=192.168.1.35 FALLOS_MAX=10 TX_DESDE=-22 TX_HASTA=-15 TX_PASO=0.5 N=400 thresholdFake=0.62 thresholdFakeSel=0.515 BARRIDOS_MAX=1 HORA_FIN=None
+modo fake | barridos de tx_gain: -22.0 a -15.0 dB | N = 400 | duracion: indefinida | se corta: nunca
+tx_gain = -22.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -22.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.5 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.5 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.5 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.5 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.0 Flat FER = 0.435 | no detectados = 174 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.5 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.5 Freq.sel. FER = 0.15 | no detectados = 60 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+ERROR: iio:device4: Unable to dequeue block: Connection timed out (110)
+progreso de 192.168.1.35 guardado: 6 de 15 ganancias en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.35/listener_fake_2026-11-20_09-35-40_192.168.1.35.npz
+error con 192.168.1.35 -> TimeoutError [Errno 110] Connection timed out
+>>> reconectando la vpn con /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/vpn.sh
+POST https://200.16.19.5/
+Connected to 200.16.19.5:443
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got HTTP response: HTTP/1.1 303 See Other
+GET https://200.16.19.5/
+Connected to 200.16.19.5:443
+SSL negotiation with 200.16.19.5
+ERROR: READ INTEGER: -110
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Please enter your username and password.
+POST https://200.16.19.5/webvpn.html
+Error reading HTTP response: Invalid argument
+Retrying failed POST request on new connection
+POST https://200.16.19.5/webvpn.html
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Failed to read from TLS/DTLS socket: Success.
+Error fetching HTTPS response
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got CONNECT response: HTTP/1.1 200 OK
+CSTP connected. DPD 300, Keepalive 30
+No DTLS address
+Set up UDP failed; using SSL instead
+Configured as 193.168.1.17, with SSL connected and DTLS disabled
+Session authentication will expire at Fri, 20 Nov 2026 21:45:39 -03
+Continuing in background; pid 170608
+Using vhost-net for tun acceleration, ring size 32
+ERROR: READ INTEGER: -110
+ERROR: READ INTEGER: -110
+el DNS de la vpn no resuelve: se vuelve al del router con nmcli
+Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/32)
+>>> esperando 20 s ...
+error con 192.168.1.35 -> OSError [Errno 16] Device or resource busy
+todas las ips ocupadas (1/10), esperando 60 s ...
+tx_gain = -22.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -22.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.5 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.5 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.5 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.5 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.0 Flat FER = 0.46 | no detectados = 184 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.5 Flat FER = 0.0225 | no detectados = 9 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.5 Freq.sel. FER = 0.17 | no detectados = 68 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.5 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.5 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.0 Freq.sel. FER = 0.205 | no detectados = 82 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -17.5 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -17.5 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -17.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -17.0 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.5 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.5 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.0 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -15.5 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -15.5 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -15.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -15.0 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+barrido 1 terminado con 192.168.1.35: /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.35/listener_fake_2026-11-20_09-47-23_192.168.1.35.npz
+fin | barridos completos: 1 | capturas en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures
+CSTP rekey due
+Renegotiated SSL on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+CSTP rekey due
+SSL connection failure: TLS Application data were received, while expecting handshake data.
+Rehandshake failed; attempting new-tunnel
+EPOLL_CTL_DEL: Bad file descriptor
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got CONNECT response: HTTP/1.1 200 OK
+Reconnect gave different Legacy IP netmask (255.255.255.0 != 255.255.255.255)
+Cookie is no longer valid, ending session
+Reconnect failed
+Cookie was rejected by server; exiting.

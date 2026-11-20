@@ -6,3 +6,11 @@ old/
 
 ##credenciales de la vpn
 scripts/vpn.env
+
+##restos de root (no se suben)
+src/
+
+##copias de respaldo del notebook y archivos de control de guardia.sh / vpn.sh
+*.ipynb.bak
+data/listener_logs/.latido
+data/listener_logs/.vpn.lock

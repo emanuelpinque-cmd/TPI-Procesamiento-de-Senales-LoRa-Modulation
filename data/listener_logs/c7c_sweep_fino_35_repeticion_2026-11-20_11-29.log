@@ -1,0 +1,113 @@
+parametros: MODO=sweep IPS=192.168.1.35 FALLOS_MAX=10 TX_DESDE=-34 TX_HASTA=-28 TX_PASO=0.25 N=400 BARRIDOS_MAX=1 HORA_FIN=None
+modo sweep | barridos de tx_gain: -34.0 a -28.0 dB | N = 400 | duracion: indefinida | se corta: nunca
+conectando a 192.168.1.35 ...
+tx_gain = -34.0 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -34.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.75 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.75 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.5 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.5 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.25 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.25 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.0 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.75 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.75 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.5 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.5 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.25 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.25 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.0 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -31.75 Flat FER = 0.9975 SER = 0.9975 BER = 0.9975 | ip 192.168.1.35
+tx_gain = -31.75 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -31.5 Flat FER = 0.9775 SER = 0.9775 BER = 0.9775 | ip 192.168.1.35
+tx_gain = -31.5 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -31.25 Flat FER = 0.6925 SER = 0.6925 BER = 0.6925 | ip 192.168.1.35
+tx_gain = -31.25 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+ERROR: iio:device4: Unable to dequeue block: Connection timed out (110)
+progreso de 192.168.1.35 guardado: 12 de 25 ganancias en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.35/listener_2026-11-20_11-29-31_192.168.1.35.npz
+error con 192.168.1.35 -> TimeoutError [Errno 110] Connection timed out
+>>> reconectando la vpn con /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/vpn.sh
+POST https://200.16.19.5/
+Connected to 200.16.19.5:443
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+ERROR: READ INTEGER: -110
+Got HTTP response: HTTP/1.1 303 See Other
+GET https://200.16.19.5/
+Connected to 200.16.19.5:443
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Please enter your username and password.
+POST https://200.16.19.5/webvpn.html
+Error reading HTTP response: Invalid argument
+Retrying failed POST request on new connection
+POST https://200.16.19.5/webvpn.html
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Failed to read from TLS/DTLS socket: Success.
+Error fetching HTTPS response
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got CONNECT response: HTTP/1.1 200 OK
+CSTP connected. DPD 300, Keepalive 30
+No DTLS address
+Set up UDP failed; using SSL instead
+Configured as 193.168.1.18, with SSL connected and DTLS disabled
+Session authentication will expire at Fri, 20 Nov 2026 23:45:52 -03
+Continuing in background; pid 181489
+Using vhost-net for tun acceleration, ring size 32
+ERROR: READ INTEGER: -110
+ERROR: READ INTEGER: -110
+el DNS de la vpn no resuelve: se vuelve al del router con nmcli
+Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/34)
+>>> esperando 20 s ...
+conectando a 192.168.1.35 ...
+se sigue el barrido cortado de 192.168.1.35 desde la ganancia 13 de 25
+progreso de 192.168.1.35 guardado: 12 de 25 ganancias en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.35/listener_2026-11-20_11-29-31_192.168.1.35.npz
+error con 192.168.1.35 -> OSError [Errno 16] Device or resource busy
+todas las ips ocupadas (1/10), esperando 60 s ...
+conectando a 192.168.1.35 ...
+se sigue el barrido cortado de 192.168.1.35 desde la ganancia 13 de 25
+tx_gain = -31.0 Flat FER = 0.1425 SER = 0.1425 BER = 0.1425 | ip 192.168.1.35
+tx_gain = -31.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -30.75 Flat FER = 0.0225 SER = 0.0225 BER = 0.0225 | ip 192.168.1.35
+tx_gain = -30.75 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -30.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -30.5 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -30.25 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -30.25 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -30.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -30.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -29.75 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -29.75 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -29.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -29.5 Freq.sel. FER = 0.9975 SER = 0.9975 BER = 0.9975 | ip 192.168.1.35
+tx_gain = -29.25 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -29.25 Freq.sel. FER = 0.965 SER = 0.965 BER = 0.965 | ip 192.168.1.35
+tx_gain = -29.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -29.0 Freq.sel. FER = 0.6875 SER = 0.6885 BER = 0.6879375 | ip 192.168.1.35
+tx_gain = -28.75 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.75 Freq.sel. FER = 0.2325 SER = 0.2325 BER = 0.2325 | ip 192.168.1.35
+tx_gain = -28.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.5 Freq.sel. FER = 0.0425 SER = 0.043 BER = 0.042625 | ip 192.168.1.35
+tx_gain = -28.25 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.25 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.0 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+barrido 1 terminado con 192.168.1.35: /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.35/listener_2026-11-20_11-29-31_192.168.1.35.npz
+fin | barridos completos: 1 | capturas en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures
+Read error on SSL session: Success.
+SSL negotiation with 200.16.19.5
+Server certificate verify failed: signer not found
+Connected to HTTPS on 200.16.19.5 with ciphersuite (TLS1.2)-(RSA)-(AES-256-GCM)
+Got CONNECT response: HTTP/1.1 200 OK
+Reconnect gave different Legacy IP netmask (255.255.255.0 != 255.255.255.255)
+Cookie is no longer valid, ending session
+Reconnect failed
+Cookie was rejected by server; exiting.

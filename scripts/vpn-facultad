@@ -1,0 +1,33 @@
+#!/bin/bash
+##script que corre como root para reconectar la vpn de la facultad (AnyConnect)
+##se instala en /usr/local/bin/vpn-facultad (dueño root) y sudoers deja correr SOLO esto sin contraseña
+##
+##uso (lo llama vpn.sh):  echo "$VPN_PASS" | sudo -n /usr/local/bin/vpn-facultad "$VPN_USER" "$VPN_CERT"
+##la contraseña de la vpn entra por stdin, no como argumento (asi no aparece en ps)
+
+VPN_USER="$1"
+VPN_CERT="$2"
+
+##se valida lo que entra para que no se puedan colar opciones raras de openconnect
+if [[ ! "$VPN_USER" =~ ^[A-Za-z0-9._@-]+$ ]]; then
+    echo "usuario de vpn invalido" >&2
+    exit 1
+fi
+if [[ ! "$VPN_CERT" =~ ^pin-sha256:[A-Za-z0-9+/=]+$ ]]; then
+    echo "certificado de vpn invalido" >&2
+    exit 1
+fi
+
+##se corta la vpn anterior si quedo colgada
+##CONT: si quedo pausada (Ctrl+Z) no atiende el TERM hasta que se la despierta
+pkill -CONT -x openconnect
+pkill -x openconnect
+sleep 3
+##si alguna no se cerro por las buenas, se la mata
+pkill -KILL -x openconnect
+sleep 1
+
+exec /usr/bin/openconnect --protocol=anyconnect \
+    --user="$VPN_USER" --passwd-on-stdin \
+    --servercert "$VPN_CERT" \
+    --background 200.16.19.5:443

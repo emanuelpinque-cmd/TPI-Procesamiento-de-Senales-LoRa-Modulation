@@ -1,0 +1,55 @@
+parametros: MODO=sweep IPS=192.168.1.35 FALLOS_MAX=10 TX_DESDE=-34 TX_HASTA=-28 TX_PASO=0.25 N=400 BARRIDOS_MAX=1 HORA_FIN=None
+modo sweep | barridos de tx_gain: -34.0 a -28.0 dB | N = 400 | duracion: indefinida | se corta: nunca
+conectando a 192.168.1.35 ...
+tx_gain = -34.0 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -34.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.75 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.75 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.5 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.5 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.25 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.25 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.0 Flat FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -33.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.75 Flat FER = 0.9625 SER = 0.9625 BER = 0.9625 | ip 192.168.1.35
+tx_gain = -32.75 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.5 Flat FER = 0.67 SER = 0.67 BER = 0.67 | ip 192.168.1.35
+tx_gain = -32.5 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.25 Flat FER = 0.17 SER = 0.17 BER = 0.17 | ip 192.168.1.35
+tx_gain = -32.25 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -32.0 Flat FER = 0.02 SER = 0.02 BER = 0.02 | ip 192.168.1.35
+tx_gain = -32.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -31.75 Flat FER = 0.0025 SER = 0.0025 BER = 0.0025 | ip 192.168.1.35
+tx_gain = -31.75 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -31.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -31.5 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -31.25 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -31.25 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -31.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -31.0 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -30.75 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -30.75 Freq.sel. FER = 1.0 SER = 1.0 BER = 1.0 | ip 192.168.1.35
+tx_gain = -30.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -30.5 Freq.sel. FER = 0.975 SER = 0.975 BER = 0.975 | ip 192.168.1.35
+tx_gain = -30.25 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -30.25 Freq.sel. FER = 0.78 SER = 0.781 BER = 0.7804375 | ip 192.168.1.35
+tx_gain = -30.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -30.0 Freq.sel. FER = 0.335 SER = 0.335 BER = 0.335 | ip 192.168.1.35
+tx_gain = -29.75 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -29.75 Freq.sel. FER = 0.0425 SER = 0.0435 BER = 0.0429375 | ip 192.168.1.35
+tx_gain = -29.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -29.5 Freq.sel. FER = 0.0075 SER = 0.0075 BER = 0.0075 | ip 192.168.1.35
+tx_gain = -29.25 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -29.25 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -29.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -29.0 Freq.sel. FER = 0.0 SER = 0.0005 BER = 0.000125 | ip 192.168.1.35
+tx_gain = -28.75 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.75 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.5 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.5 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.25 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.25 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.0 Flat FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+tx_gain = -28.0 Freq.sel. FER = 0.0 SER = 0.0 BER = 0.0 | ip 192.168.1.35
+barrido 1 terminado con 192.168.1.35: /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.35/listener_2026-11-20_08-54-26_192.168.1.35.npz
+fin | barridos completos: 1 | capturas en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures

@@ -1,0 +1,34 @@
+parametros: MODO=fake IPS=192.168.1.35 FALLOS_MAX=10 TX_DESDE=-22 TX_HASTA=-15 TX_PASO=0.5 N=400 thresholdFake=0.62 thresholdFakeSel=0.515 BARRIDOS_MAX=1 HORA_FIN=None
+modo fake | barridos de tx_gain: -22.0 a -15.0 dB | N = 400 | duracion: indefinida | se corta: nunca
+tx_gain = -22.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -22.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.5 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.5 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -21.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.5 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.5 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -20.0 Freq.sel. FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.5 Flat FER = 0.345 | no detectados = 138 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.5 Freq.sel. FER = 0.4575 | no detectados = 183 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.0 Flat FER = 0.5 | no detectados = 200 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -19.0 Freq.sel. FER = 0.04 | no detectados = 16 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.5 Flat FER = 0.4725 | no detectados = 189 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.5 Freq.sel. FER = 0.0025 | no detectados = 1 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.0 Flat FER = 0.0725 | no detectados = 29 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -18.0 Freq.sel. FER = 0.2225 | no detectados = 89 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -17.5 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -17.5 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -17.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -17.0 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.5 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.5 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -16.0 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -15.5 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -15.5 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -15.0 Flat FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+tx_gain = -15.0 Freq.sel. FER = 0.0 | no detectados = 0 | falsas alarmas = 0 | ip 192.168.1.35
+barrido 1 terminado con 192.168.1.35: /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures/192.168.1.35/listener_fake_2026-11-20_10-49-07_192.168.1.35.npz
+fin | barridos completos: 1 | capturas en /home/emanuelp/Projects/Python/LoRa-Tp/ChirpModulation/scripts/../data/listener_captures
