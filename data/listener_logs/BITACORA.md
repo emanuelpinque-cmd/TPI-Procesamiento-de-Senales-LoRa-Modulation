@@ -317,3 +317,15 @@ solo escalas/ejes/N, sin tocar la lógica).
   SNR hasta 5 dB. Verificado: ninguna curva sube.
 - Respaldo de antes: `LoRa_V8_antes_de_figuras_pluto.ipynb.bak`. Cambiaron solo las celdas 17 y 76, más las nuevas 77–80.
 - Copias PNG en `data/listener_logs/presentacion/`.
+
+### 20/11 tarde — Notebook listo para exponer
+- `capturePluto` descarta 10 capturas (`discard`): se fue el piso falso de FER de la "captura god".
+- 2.3 medida de nuevo en el .35 (rx_gain 40, -54..-44 paso 0.5, N = 100 en 5 conexiones por punto):
+  `pluto_sweep_2026-11-20_14-46_192.168.1.35_SF8.npz`. Plano 0 desde -50, selectivo desde -47.5.
+- 2.3b medida en el .35 con umbral 0.62 (-64..0 paso 2, N = 40): `pluto_fake_2026-11-20_15-38_192.168.1.35_SF8.npz`.
+  Por símbolos funciona desde -44 dB, correlación desde -18 dB → ~26 dB a favor de símbolos; 0 falsas alarmas.
+- `identifyPreambleWithSymbols` reescrita sin continue/break/lambda (cada muestra como inicio); idéntica a la anterior
+  en 384 detecciones y 60 registros de búsqueda.
+- Refactorización: todas las variables y funciones del notebook en inglés (comentarios y textos siguen en español).
+  Verificado: 44 celdas sin Pluto corren sin errores; las del Pluto probadas con un Pluto simulado y después con el real.
+- Salidas regeneradas en todo el notebook ("Run All"), incluida la 2.2 con el Pluto.
