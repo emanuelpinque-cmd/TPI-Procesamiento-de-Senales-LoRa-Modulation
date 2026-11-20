@@ -1,6 +1,10 @@
 ##listener.py: barridos de tx_gain con el Pluto, repetidos sin parar (o hasta DURACION_MAX)
+##dos modos (parametro MODO):
+##   "sweep" -> FER, SER y BER con la trama completa (como la 2.3 del notebook)
+##   "fake"  -> solo FER, con 50% preambulos reales y 50% fakes (como la 2.3c del notebook)
 ##cada barrido se guarda en su propio archivo, dentro de una carpeta por ip:
-##   data/listener_captures/192.168.1.33/listener_2026-11-18_21-30-00_192.168.1.33.npz
+##   data/listener_captures/192.168.1.33/listener_2026-11-18_21-30-00_192.168.1.33.npz        (sweep)
+##   data/listener_captures/192.168.1.33/listener_fake_2026-11-18_21-30-00_192.168.1.33.npz   (fake)
 ##un archivo tiene datos de UNA sola ip: si la ip se cuelga a mitad del barrido, queda guardado
 ##lo que se midio con ella y la siguiente ip arranca un archivo nuevo (no se mezclan ips)
 ##
@@ -18,6 +22,7 @@ import numpy as np
 import adi
 
 ##---------------- Parametros ----------------
+MODO = "fake"           ##"sweep" = FER, SER y BER | "fake" = solo FER con 50% fakes
 IPS = ["192.168.1.35"]   ##se prueban en este orden
 TX_DESDE = -80          ##tx_gain inicial (dB)
 TX_HASTA = 0       ##tx_gain final (dB), incluido
@@ -27,7 +32,8 @@ SF = 7
 PL = [12,32,21,5,1]     ##payload (simbolos)
 before = 2000           ##silencio antes de la trama
 after = 2000            ##silencio despues de la trama
-threshold = 0.3
+threshold = 0.3         ##umbral del modo sweep
+thresholdFake = 0.67    ##umbral del modo fake (el fake da rho ~0.88 del real, hay que separarlos)
 rx_gain = 40
 frec = int(800e6)
 bw = int(2.5e6)
@@ -85,7 +91,7 @@ def freqSelective(samples, h=np.array([np.sqrt(0.8),np.sqrt(0.2)])):
     return np.convolve(samples, h)[:len(samples)]
 
 ##---------------- Pluto ----------------
-def conectar(ip, buffer_size):
+def conectar(ip, buffer_size, txGain=None):
     sdr = adi.Pluto("ip:" + ip)
     sdr.sample_rate = bw
     sdr.rx_lo = frec
@@ -96,14 +102,22 @@ def conectar(ip, buffer_size):
     sdr.rx_rf_bandwidth = bw
     sdr.tx_rf_bandwidth = bw
     sdr.tx_cyclic_buffer = True
+    if txGain is not None:
+        sdr.tx_hardwaregain_chan0 = txGain
     return sdr
 
+##OJO: con libiio v1, tx_destroy_buffer / rx_destroy_buffer NO cierran los streams
+##(el tx ciclico viejo sigue vivo). Por eso se borran a mano, igual que liberarPluto del notebook
 def liberar(sdr):
     for f in (sdr.tx_destroy_buffer, sdr.rx_destroy_buffer):
         try:
             f()
         except Exception:
             pass
+    sdr._tx_block = None
+    sdr._tx_buf_stream = None
+    sdr._tx_stream = None
+    sdr._rx_stream = None
 
 ##mide un punto (una ganancia, un canal): devuelve (FER, SER, BER)
 def medirPunto(sdr, tramaTx, trama, preamble):
@@ -137,6 +151,28 @@ def medirPunto(sdr, tramaTx, trama, preamble):
             bitsErrados += bitErrors(PL[k], est, SF)
     sdr.tx_destroy_buffer()
     return tramasErradas/N, simbolosErrados/(N*nSym), bitsErrados/(N*nBits)
+
+##modo fake: mide un punto (una ganancia, un canal) con N/2 reales y N/2 fakes
+##como cambia la señal, se reconecta para cada una (por lo de libiio v1, ver liberar)
+##devuelve (FER, noDetectados, falsasAlarmas)
+def medirPuntoFake(ip, txGain, señales, preamble):
+    global sdr
+    detecciones = [0, 0]                  ##0 = reales detectados, 1 = fakes detectados
+    for k in range(2):
+        tramaTx = señales[k]
+        sdr = conectar(ip, 2*len(tramaTx), txGain)
+        sdr.tx(np.tile(tramaTx,4)*SCALE)  ##bug del pluto: solo toma 1/4 del buffer
+        for j in range(3):                ##se descartan capturas viejas
+            sdr.rx()
+        for i in range(N//2):
+            (detecto,_) = identifyPreamble(sdr.rx(), preamble, thresholdFake)
+            if detecto:
+                detecciones[k] += 1
+        liberar(sdr)
+        sdr = None
+    noDetectados = N//2 - detecciones[0]
+    falsasAlarmas = detecciones[1]
+    return (noDetectados + falsasAlarmas)/N, noDetectados, falsasAlarmas
 
 ##---------------- Errores y vpn ----------------
 ##busy = el pluto esta ocupado (errno 16 o el mensaje dice busy)
@@ -174,8 +210,14 @@ def manejarError(e):
 
 ##guarda el barrido de una ip en su carpeta
 def guardar(archivo, fecha, ip, FER, SER, BER):
-    np.savez(archivo, tx_list=tx_list, FER=FER, SER=SER, BER=BER, N=N, SF=SF, PL=np.array(PL),
+    np.savez(archivo, modo="sweep", tx_list=tx_list, FER=FER, SER=SER, BER=BER, N=N, SF=SF, PL=np.array(PL),
              threshold=threshold, rx_gain=rx_gain, before=before, after=after,
+             ip=ip, fecha=fecha)
+
+##modo fake: en vez de SER y BER guarda los no detectados y las falsas alarmas
+def guardarFake(archivo, fecha, ip, FER, noDetectados, falsasAlarmas):
+    np.savez(archivo, modo="fake", tx_list=tx_list, FER=FER, noDetectados=noDetectados, falsasAlarmas=falsasAlarmas,
+             N=N, SF=SF, threshold=thresholdFake, rx_gain=rx_gain, before=before, after=after,
              ip=ip, fecha=fecha)
 
 ##---------------- Barridos ----------------
@@ -185,21 +227,30 @@ trama = sendPayload(SF, PL)
 tramaTx = addSilence(trama, before, after)
 tramas = [tramaTx, freqSelective(tramaTx)]      ##0 = flat, 1 = selectivo
 nombres = ["Flat","Freq.sel."]
+##modo fake: señalesFake[canal] = [preambulo real, fake], con silencio y por el canal
+fake = Chirp(SF,[0]*8,True).f
+realTx = addSilence(preamble, before, after)
+fakeTx = addSilence(fake, before, after)
+señalesFake = [[realTx, fakeTx], [freqSelective(realTx), freqSelective(fakeTx)]]
+if MODO not in ("sweep", "fake"):
+    raise ValueError("MODO tiene que ser 'sweep' o 'fake'")
+sdr = None
 
 t0 = time.time()
 ipActual = 0
 rondasFallidas = 0
 barridos = 0
-print("barridos de tx_gain:", tx_list[0], "a", tx_list[-1], "dB | N =", N,
+print("modo", MODO, "| barridos de tx_gain:", tx_list[0], "a", tx_list[-1], "dB | N =", N,
       "| duracion:", "indefinida" if DURACION_MAX is None else "%d s" % DURACION_MAX)
 
 try:
     while not tiempoVencido():
         ip = IPS[ipActual]
-        ##1) conectar
+        ##1) conectar (en modo fake se conecta dentro de medirPuntoFake, una vez por señal)
         try:
-            print("conectando a", ip, "...")
-            sdr = conectar(ip, 2*len(tramaTx))
+            if MODO == "sweep":
+                print("conectando a", ip, "...")
+                sdr = conectar(ip, 2*len(tramaTx))
         except KeyboardInterrupt:
             raise
         except Exception as e:
@@ -210,21 +261,29 @@ try:
         inicio = datetime.datetime.now()
         fecha = inicio.strftime("%Y-%m-%d %H:%M:%S")
         os.makedirs(os.path.join(CARPETA, ip), exist_ok=True)
-        archivo = os.path.join(CARPETA, ip, "listener_%s_%s.npz" % (inicio.strftime("%Y-%m-%d_%H-%M-%S"), ip))
+        prefijo = "listener_fake" if MODO == "fake" else "listener"
+        archivo = os.path.join(CARPETA, ip, "%s_%s_%s.npz" % (prefijo, inicio.strftime("%Y-%m-%d_%H-%M-%S"), ip))
         FER = np.full((2,len(tx_list)), np.nan)     ##nan = punto no medido
-        SER = np.full((2,len(tx_list)), np.nan)
-        BER = np.full((2,len(tx_list)), np.nan)
+        SER = np.full((2,len(tx_list)), np.nan)     ##en modo fake: no detectados
+        BER = np.full((2,len(tx_list)), np.nan)     ##en modo fake: falsas alarmas
         medidos = 0
         try:
             for idx in range(len(tx_list)):
                 if tiempoVencido():
                     break
-                sdr.tx_hardwaregain_chan0 = int(tx_list[idx])
-                for canal in range(2):
-                    (FER[canal,idx], SER[canal,idx], BER[canal,idx]) = medirPunto(sdr, tramas[canal], trama, preamble)
-                    print("tx_gain =", tx_list[idx], nombres[canal], "FER =", FER[canal,idx], "SER =", SER[canal,idx], "BER =", BER[canal,idx], "| ip", ip)
-                medidos += 1
-                guardar(archivo, fecha, ip, FER, SER, BER)      ##se guarda en cada ganancia
+                if MODO == "sweep":
+                    sdr.tx_hardwaregain_chan0 = int(tx_list[idx])
+                    for canal in range(2):
+                        (FER[canal,idx], SER[canal,idx], BER[canal,idx]) = medirPunto(sdr, tramas[canal], trama, preamble)
+                        print("tx_gain =", tx_list[idx], nombres[canal], "FER =", FER[canal,idx], "SER =", SER[canal,idx], "BER =", BER[canal,idx], "| ip", ip)
+                    medidos += 1
+                    guardar(archivo, fecha, ip, FER, SER, BER)      ##se guarda en cada ganancia
+                else:
+                    for canal in range(2):
+                        (FER[canal,idx], SER[canal,idx], BER[canal,idx]) = medirPuntoFake(ip, int(tx_list[idx]), señalesFake[canal], preamble)
+                        print("tx_gain =", tx_list[idx], nombres[canal], "FER =", FER[canal,idx], "| no detectados =", int(SER[canal,idx]), "| falsas alarmas =", int(BER[canal,idx]), "| ip", ip)
+                    medidos += 1
+                    guardarFake(archivo, fecha, ip, FER, SER, BER)  ##se guarda en cada ganancia
             rondasFallidas = 0
             if medidos == len(tx_list):
                 barridos += 1
@@ -239,7 +298,9 @@ try:
                 print("progreso de", ip, "guardado:", medidos, "de", len(tx_list), "ganancias en", archivo)
             manejarError(e)
         finally:
-            liberar(sdr)
+            if sdr is not None:
+                liberar(sdr)
+                sdr = None
 except KeyboardInterrupt:
     print("\ncortado con Ctrl+C")
 print("fin | barridos completos:", barridos, "| capturas en", CARPETA)

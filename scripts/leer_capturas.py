@@ -3,6 +3,7 @@
 ##uso (desde la carpeta ChirpModulation, con el python del venv):
 ##   python scripts/leer_capturas.py                    -> lista todas las capturas con su numero
 ##   python scripts/leer_capturas.py 0                  -> grafica la captura 0 (FER, SER y BER con fecha, hora e ip)
+##                                                         si es del modo fake: FER, no detectados y falsas alarmas
 ##   python scripts/leer_capturas.py -1                 -> grafica la ultima
 ##   python scripts/leer_capturas.py 192.168.1.33       -> lista solo las de esa ip
 ##   python scripts/leer_capturas.py 192.168.1.33 0     -> grafica la captura 0 de esa ip
@@ -12,13 +13,18 @@ import sys, os, glob
 import numpy as np
 import matplotlib.pyplot as plt
 
+##modo de la captura: "sweep" (FER, SER, BER) o "fake" (FER con 50% fakes). Las viejas no lo guardan: son sweep
+def modo(d):
+    return str(d["modo"]) if "modo" in d else "sweep"
+
 CARPETA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "listener_captures")
 
 ##archivos ordenados por fecha (el nombre empieza con la fecha). ip=None -> todas las ips
 def capturas(ip=None):
     carpeta = "*" if ip is None else ip
     archivos = glob.glob(os.path.join(CARPETA, carpeta, "listener_*.npz"))
-    return sorted(archivos, key=os.path.basename)
+    ##el nombre sin "fake_" empieza con la fecha: asi quedan mezcladas sweep y fake por fecha
+    return sorted(archivos, key=lambda a: os.path.basename(a).replace("listener_fake_","listener_"))
 
 def listar(ip=None):
     archivos = capturas(ip)
@@ -27,8 +33,8 @@ def listar(ip=None):
     for i in range(len(archivos)):
         d = np.load(archivos[i])
         medidos = int(np.sum(~np.isnan(d["FER"][0])))
-        print("%3d  %s | ip %s | tx_gain %d a %d dB | %d/%d ganancias | N=%d"%(
-              i, d["fecha"], d["ip"], d["tx_list"][0], d["tx_list"][-1], medidos, len(d["tx_list"]), int(d["N"])))
+        print("%3d  %s | %-5s | ip %s | tx_gain %d a %d dB | %d/%d ganancias | N=%d"%(
+              i, d["fecha"], modo(d), d["ip"], d["tx_list"][0], d["tx_list"][-1], medidos, len(d["tx_list"]), int(d["N"])))
 
 def mostrar(i, ip=None):
     archivos = capturas(ip)
@@ -37,17 +43,25 @@ def mostrar(i, ip=None):
     medidos = int(np.sum(~np.isnan(d["FER"][0])))
 
     fig, ax = plt.subplots(1, 3, figsize=(16,5))
-    for k, nombre in enumerate(["FER","SER","BER"]):
-        valores = d[nombre]
-        ax[k].semilogy(tx_list, valores[0], marker="s", label="Flat")
-        ax[k].semilogy(tx_list, valores[1], marker="d", label="Freq.sel.")
+    if modo(d) == "fake":
+        ##FER en escala log; no detectados y falsas alarmas son cantidades (de N/2 cada una)
+        nombres = ["FER","noDetectados","falsasAlarmas"]
+        titulos = ["FER (no detectados + falsas alarmas) / N","Reales no detectados (de N/2)","Fakes detectados = falsas alarmas (de N/2)"]
+    else:
+        nombres = ["FER","SER","BER"]
+        titulos = nombres
+    for k in range(3):
+        valores = d[nombres[k]]
+        graficar = ax[k].semilogy if k == 0 or modo(d) == "sweep" else ax[k].plot
+        graficar(tx_list, valores[0], marker="s", label="Flat")
+        graficar(tx_list, valores[1], marker="d", label="Freq.sel.")
         ax[k].set_xlabel("tx_gain (dB)")
-        ax[k].set_ylabel(nombre)
-        ax[k].set_title(nombre)
+        ax[k].set_ylabel(nombres[k])
+        ax[k].set_title(titulos[k])
         ax[k].legend()
     ##datos de la medicion arriba de los graficos
-    fig.suptitle("Captura %d | fecha %s | ip %s | %s\nSF=%d, N=%d capturas por punto, threshold=%.2f, rx_gain=%d dB, silencio %d/%d, %d/%d ganancias medidas"%(
-                 i, d["fecha"], d["ip"], os.path.basename(archivos[i]),
+    fig.suptitle("Captura %d (%s) | fecha %s | ip %s | %s\nSF=%d, N=%d capturas por punto, threshold=%.2f, rx_gain=%d dB, silencio %d/%d, %d/%d ganancias medidas"%(
+                 i, modo(d), d["fecha"], d["ip"], os.path.basename(archivos[i]),
                  int(d["SF"]), int(d["N"]), float(d["threshold"]), int(d["rx_gain"]),
                  int(d["before"]), int(d["after"]), medidos, len(tx_list)), fontsize=10)
     plt.tight_layout()
