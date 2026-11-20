@@ -14,3 +14,4 @@ src/
 *.ipynb.bak
 data/listener_logs/.latido
 data/listener_logs/.vpn.lock
+data/listener_logs/vpn_manual.log
